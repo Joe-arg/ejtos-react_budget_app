@@ -7,33 +7,39 @@ import Budget from './components/Budget';
 import Remaining from './components/Remaining';
 import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
-import ExpenseItem from './components/ExpenseItem';
 import AllocationForm from './components/AllocationForm';
+import CurrencyItem from './components/CurrencyItem';
 
 const App = () => {
     return (
         <AppProvider>
             <div className='container'>
                 <h1 className='mt-3'>Company's Budget Allocation</h1>
-                    <div className='row mt-3'>
-                        <div className='col-sm'>
-                            <Budget />
-                        </div>
-                        <div className='col-sm'>
-                            <Remaining />
-                        </div>
-                        <div className='col-sm'>
-                            <ExpenseTotal />
-                        </div>
-                        <div className='col-sm'>
-                            <ExpenseList />
-                        </div>
-                        <div className='col-sm'>
-                            <ExpenseItem />
-                        </div>
-                        <div className='col-sm'>
-                            <AllocationForm />
-                        </div>
+                <div className='row mt-3'>
+                    <div className='col-md'>
+                        <Budget />
+                    </div>
+                    <div className='col-md'>
+                        <Remaining />
+                    </div>
+                    <div className='col-md'>
+                        <ExpenseTotal />
+                    </div>
+                    <div className='col-md'>
+                        <CurrencyItem />
+                    </div>
+                </div>
+                <div className='row mt-3'>
+                    <h2>Allocation</h2>
+                    <div className='col-xl'>
+                        <ExpenseList />
+                    </div>
+                </div>
+                <div className='row mt-3'>
+                    <h2 className='mb-3'>Change Allocation</h2>
+                    <div className='col-xl'>
+                        <AllocationForm />
+                    </div>
                 </div>
             </div>
         </AppProvider>
